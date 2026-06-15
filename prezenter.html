@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Ściąga prezentera — przygotowanie do rozmowy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E1217;--surface:#161B22;--surface2:#1E2530;--line:#2A323D;
+    --text:#EDF1F6;--muted:#97A3B0;--soft:#C7D0DA;--gold:#E0A458;--teal:#3FC0A0;--red:#E2725B;
+    --h:'Space Grotesk',sans-serif;--b:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--b);line-height:1.7;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--h);line-height:1.15;font-weight:600}
+  .wrap{max-width:820px;margin:0 auto;padding:0 26px}
+  .topnav{position:sticky;top:0;z-index:50;background:rgba(14,18,23,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topnav .inner{max-width:820px;margin:0 auto;padding:13px 26px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+  .brand{font-family:var(--h);font-weight:700;letter-spacing:.04em;font-size:15px}.brand .g{color:var(--gold)}
+  .topnav a{color:var(--muted);text-decoration:none;font-size:12px;font-family:var(--h);letter-spacing:.04em;margin-left:14px;white-space:nowrap}
+  .topnav a:hover{color:var(--gold)}
+  .links{display:flex;flex-wrap:wrap}
+  .hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .kick{color:var(--gold);font-family:var(--h);font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:clamp(34px,6vw,56px);font-weight:700;letter-spacing:-.02em}
+  .hero h1 .g{color:var(--gold)}
+  .hero p{font-size:19px;color:var(--muted);margin-top:18px;max-width:56ch}
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(24px,3.6vw,34px);margin-bottom:8px}
+  h2 .g{color:var(--gold)}
+  .sub{color:var(--muted);font-size:16px;margin-bottom:20px}
+  /* pitch box */
+  .pitch{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:28px 32px}
+  .pitch p{font-family:var(--h);font-size:clamp(19px,2.6vw,24px);font-weight:500;line-height:1.5;color:var(--text)}
+  .pitch p .g{color:var(--gold)}.pitch p .t{color:var(--teal)}
+  .micro{margin-top:16px;font-size:15px;color:var(--muted)}
+  /* rules */
+  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:8px}
+  .rule{background:var(--surface2);border-radius:12px;padding:18px 22px}
+  .rule .n{font-family:var(--h);color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.08em}
+  .rule p{font-size:15px;color:var(--soft);margin-top:6px}
+  /* talking blocks */
+  .block{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 30px;margin-top:18px}
+  .block .goal{font-size:14px;color:var(--teal);font-family:var(--h);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+  .say{font-family:var(--h);color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
+  .block .line{font-size:17px;color:var(--soft);line-height:1.6;margin-bottom:14px}
+  .punch{background:var(--surface2);border-radius:12px;padding:14px 18px;margin:14px 0;font-family:var(--h);font-size:17px;font-weight:500;color:var(--gold)}
+  .punch:before{content:'„';color:var(--muted)}.punch:after{content:'”';color:var(--muted)}
+  .qa{border-top:1px solid var(--line);margin-top:16px;padding-top:14px}
+  .qa .q{font-family:var(--h);color:var(--text);font-weight:600;font-size:15.5px;margin-bottom:6px}
+  .qa .q:before{content:'Pytanie: ';color:var(--red)}
+  .qa .a{font-size:15.5px;color:var(--muted)}
+  .qa .a:before{content:'Ty: ';color:var(--teal);font-family:var(--h)}
+  /* faq */
+  .faq .qa{border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:12px;background:var(--surface)}
+  /* remember */
+  .remember{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+  .rem{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px}
+  .rem .num{font-family:var(--h);color:var(--gold);font-size:24px;font-weight:700;flex:none}
+  .rem p{font-size:17px;color:var(--soft);margin:0}
+  .foot{padding:48px 0;text-align:center;color:var(--muted);font-family:var(--h);font-size:13px;letter-spacing:.1em}
+  .backlink{display:inline-block;margin-top:8px;color:var(--teal);text-decoration:none;font-size:14px}
+</style>
+</head>
+<body>
+
+<div class="topnav"><div class="inner">
+  <div class="brand">ŚCIĄGA <span class="g">PREZENTERA</span></div>
+  <div class="links">
+    <a href="#pitch">Pitch 30s</a><a href="#zasady">Zasady</a><a href="#sekcje">Sekcja po sekcji</a><a href="#trudne">Trudne pytania</a><a href="#zapamietaj">Zapamiętaj</a>
+  </div>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="kick">Tylko dla Ciebie · do nauki przed rozmową</div>
+  <h1>Jak <span class="g">poprowadzić</span> rozmowę o roadmapie</h1>
+  <p>Nie ucz się slajdów na pamięć. Naucz się TEGO: jednego pitcha, kilku kluczowych zdań i odpowiedzi na trudne pytania. Reszta popłynie sama.</p>
+</div></div>
+
+<section id="pitch"><div class="wrap">
+  <div class="kick">Pitch w 30 sekund</div>
+  <h2>To zapamiętaj na pamięć</h2>
+  <div class="pitch">
+    <p>Budujemy markę <span class="g">video-first</span>. Piotr jako twarz pokazuje budowę domu z <span class="g">pełną transparentnością kosztów</span> — czego nikt w Polsce nie robi. Najpierw ściągamy <span class="t">wykonawców</span>, żeby platforma w dniu startu nie była pusta, a flagowiec buduje zaufanie i <span class="t">waitlistę</span>. Na starcie robię wszystko sam, z czasem buduję dział i wchodzę z marketingu w operacje.</p>
+  </div>
+  <p class="micro">Powtórz to 5 razy na głos w samochodzie. Jak to wejdzie w krew — masz fundament całej rozmowy.</p>
+</div></section>
+
+<section id="zasady"><div class="wrap">
+  <div class="kick">Jak się zachować</div>
+  <h2>5 zasad prowadzenia</h2>
+  <div class="rules">
+    <div class="rule"><div class="n">01 · ENERGIA</div><p>Wchodzisz z energią i pewnością. To Twój plan, znasz go lepiej niż ktokolwiek.</p></div>
+    <div class="rule"><div class="n">02 · NIE CZYTAJ</div><p>Slajdy to mapa, nie scenariusz. Patrz na nich, nie na ekran. Mów od siebie.</p></div>
+    <div class="rule"><div class="n">03 · KONKRET</div><p>Krótkie zdania, liczby, przykłady. Bez lania wody — oni to czują.</p></div>
+    <div class="rule"><div class="n">04 · SŁUCHAJ</div><p>Zadawaj pytania, rób pauzy. Rozmowa, nie monolog. Notuj ich uwagi.</p></div>
+    <div class="rule"><div class="n">05 · ZAMKNIJ</div><p>Na końcu jasno: czego potrzebujesz i jaki jest następny krok.</p></div>
+  </div>
+</div></section>
+
+<section id="sekcje"><div class="wrap">
+  <div class="kick">Sekcja po sekcji</div>
+  <h2>Co mówić przy każdym slajdzie</h2>
+
+  <div class="block">
+    <div class="goal">Otwarcie</div>
+    <p class="say">Mów tak:</p>
+    <p class="line">„Przygotowałem plan, jak budujemy markę i dział kreatywny — i jak ja w tym rosnę. Pokażę strategię, ścieżkę, zespół w czasie i to, czego od was potrzebuję. Krótko i konkretnie."</p>
+    <div class="punch">Jestem tu na lata. Buduję to jak swoje</div>
+  </div>
+
+  <div class="block">
+    <div class="goal">Strategia — jak wygrywamy</div>
+    <p class="say">Mów tak:</p>
+    <p class="line">„Nasza przewaga to zaufanie. Piotr ma autorytet praktyka, a my robimy coś, czego nikt nie robi otwarcie — pokazujemy każdą złotówkę budowy. Najpierw ściągamy wykonawców, żeby platforma nie ruszyła pusta, a flagowiec buduje publiczność i waitlistę."</p>
+    <div class="punch">Wygrywamy zaufaniem, nie samym zasięgiem</div>
+    <div class="qa"><div class="q">„Czemu wykonawcy najpierw, skoro filmy są o budujących?"</div><div class="a">„Bo marketplace bez wykonawców jest martwy. Content buduje szeroką markę i popyt, ale platforma musi mieć podaż w dniu 1 — wykonawców ściągamy przez sieć Piotra i formaty branżowe."</div></div>
+  </div>
+
+  <div class="block">
+    <div class="goal">Moja ścieżka</div>
+    <p class="say">Mów tak:</p>
+    <p class="line">„Na starcie robię wszystko sam — i to świadomie, bo chcę znać kierunek, zanim oddam robotę. Z czasem zostaję dyrektorem marketingu, buduję następcę, a potem wchodzę w operacje jako COO. Jeden wspólny format z Piotrkiem zostaje ze mną na zawsze."</p>
+    <div class="punch">Rosnę razem z firmą — od kamery do operacji</div>
+  </div>
+
+  <div class="block">
+    <div class="goal">Zespół w czasie</div>
+    <p class="say">Mów tak:</p>
+    <p class="line">„Rok 0 to ja plus ludzie na doskok. Rok 1–2 stały zespół: operatorzy, montażysta, grafik, project manager, social. Rok 3–5 powiększamy do działu. Dokładamy ludzi, gdy nie wyrabiam — i kontrolujemy to razem, z wami i ze sprzedażą."</p>
+    <div class="punch">Najpierw rozpędzam sam, potem skalujemy mądrze</div>
+    <div class="qa"><div class="q">„Kiedy pierwszy etat?"</div><div class="a">„Montażysta najszybciej — materiału będzie dużo, a montaż to wąskie gardło. Operatorów znajdę łatwo."</div></div>
+  </div>
+
+  <div class="block">
+    <div class="goal">Fazy i cele</div>
+    <p class="say">Mów tak:</p>
+    <p class="line">„Faza po fazie: fundament i brand, silnik treści, pre-launch z waitlistą, launch, skala, dojrzałość. Cele subskrypcji: 10 tysięcy w rok, 50 w dwa, pół miliona w pięć. Ale liczba, którą realnie pilnuję teraz, to waitlista — przyszli użytkownicy."</p>
+    <div class="punch">Subskrypcje to paliwo, waitlista to wynik</div>
+  </div>
+
+  <div class="block">
+    <div class="goal">Czego potrzebuję — najważniejsze, zamknij mocno</div>
+    <p class="say">Mów tak:</p>
+    <p class="line">„Dwie rzeczy. Pierwsza: kasa na brand managera, który robi też UX platformy — bo marka i produkt muszą być spójne. Druga: żebym był przy pracy nad platformą, żeby wszystko trzymało jeden język. To wszystko — resztę startu ogarniam sam, jadę z oszczędności."</p>
+    <div class="punch">Daję z siebie wszystko — proszę tylko o brand i miejsce przy stole</div>
+  </div>
+
+</div></section>
+
+<section id="trudne"><div class="wrap">
+  <div class="kick">Trudne pytania</div>
+  <h2>Bądź na nie gotowy</h2>
+  <div class="faq">
+    <div class="qa"><div class="q">„A co z Twoimi udziałami?"</div><div class="a">„Chcę o tym pogadać osobno i na spokojnie — mam konkretną propozycję, żeby przyznawać mi udziały za dowiezione kamienie. Dziś skupmy się na planie."</div></div>
+    <div class="qa"><div class="q">„Ile to kosztuje na start?"</div><div class="a">„Poza brandem — praktycznie nic. Pierwsze 1–2 miesiące jadę z oszczędności. Potem dochodzą koszty operacyjne (paliwo, hotele) i ludzie, gdy ruszy produkcja, plus stała wypłata dla mnie."</div></div>
+    <div class="qa"><div class="q">„Co jak Adam się wykruszy / budowa stanie?"</div><div class="a">„Format jest na bohaterze, nie na jednej osobie. Piotr ma więcej budów — prywatnych i ze znanymi. Mamy z czego kręcić."</div></div>
+    <div class="qa"><div class="q">„Dasz radę to wszystko ogarnąć sam?"</div><div class="a">„Na starcie tak — i świadomie tak chcę, żeby poznać kierunek. Ale planuję zatrudnienia od razu, bo nie chcę być wąskim gardłem. Montażysta pierwszy."</div></div>
+    <div class="qa"><div class="q">„Czemu organicznie, a nie reklamy?"</div><div class="a">„Bo zaufania nie da się kupić reklamą. Budujemy je treścią — a płatne ads dołożymy później, żeby wzmocnić to, co już działa."</div></div>
+    <div class="qa"><div class="q">„Kiedy zobaczymy efekty?"</div><div class="a">„Pierwsze odcinki i zasięgi już jesienią. Waitlista rośnie do launchu. To maraton — ale rytm widać od pierwszego miesiąca."</div></div>
+  </div>
+</div></section>
+
+<section id="zapamietaj"><div class="wrap">
+  <div class="kick">Na koniec rozmowy</div>
+  <h2>3 rzeczy, które mają zapamiętać</h2>
+  <div class="remember">
+    <div class="rem"><span class="num">1</span><p>Mam <b>plan i strategię</b> — wiem dokładnie, co i po co robię.</p></div>
+    <div class="rem"><span class="num">2</span><p>Startuję <b>tanio i sam</b> — skaluję dopiero, gdy to działa.</p></div>
+    <div class="rem"><span class="num">3</span><p>Buduję to <b>jak swoje</b> — i rosnę razem z firmą.</p></div>
+  </div>
+  <a class="backlink" href="index.html">← wróć do prezentacji dla chłopaków</a>
+</div></section>
+
+<div class="foot">
+  TYLKO DLA CIEBIE · POWODZENIA 🤝
+  <div style="font-size:14px;color:var(--soft);margin-top:8px">Maciek · BUDUJEDOM</div>
+</div>
+
+</body>
+</html>
