@@ -19,88 +19,75 @@
   body{background:var(--bg);color:var(--text);font-family:var(--b);line-height:1.75;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4{font-family:var(--h);line-height:1.12;font-weight:600}
   .wrap{max-width:980px;margin:0 auto;padding:0 28px}
-  /* nav */
-  .topnav{position:sticky;top:0;z-index:50;background:rgba(14,18,23,.86);backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line)}
+  .topnav{position:sticky;top:0;z-index:50;background:rgba(14,18,23,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .topnav .inner{max-width:980px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
   .brand{font-family:var(--h);font-weight:700;letter-spacing:.04em}.brand .g{color:var(--gold)}
   .topnav a{color:var(--muted);text-decoration:none;font-size:13px;font-family:var(--h);letter-spacing:.04em;margin-left:18px;white-space:nowrap}
   .topnav a:hover{color:var(--gold)}
   .links{display:flex;flex-wrap:wrap}
-  /* sections */
-  section{padding:74px 0;border-bottom:1px solid var(--line)}
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
   .kick{color:var(--gold);font-family:var(--h);font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
   h2{font-size:clamp(28px,4.4vw,46px);letter-spacing:-.02em;margin-bottom:16px}
   h2 .g{color:var(--gold)}h2 .t{color:var(--teal)}
   p{font-size:17px;color:var(--soft);margin-bottom:16px}
   p.lead{font-size:20px;color:var(--muted);max-width:64ch}
-  /* hero */
-  .hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+  .hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
   .hero .tag{font-family:var(--h);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
-  .hero h1{font-size:clamp(44px,8.5vw,96px);font-weight:700;letter-spacing:-.03em;line-height:1}
+  .hero h1{font-size:clamp(40px,7.5vw,84px);font-weight:700;letter-spacing:-.03em;line-height:1.02}
   .hero h1 .g{color:var(--gold)}.hero h1 .t{color:var(--teal)}
-  .hero p{font-size:clamp(18px,2.4vw,24px);color:var(--muted);margin-top:26px;max-width:40ch}
-  .hero .who{margin-top:38px;font-family:var(--h);font-size:14px;letter-spacing:.12em;color:var(--muted)}
-  .scrolldown{margin-top:46px;color:var(--gold);font-family:var(--h);font-size:13px;letter-spacing:.1em}
-  /* vision quote */
-  .vision{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:34px 38px;margin-top:24px}
-  .vision p{font-family:var(--h);font-size:clamp(20px,2.8vw,28px);font-weight:500;color:var(--text);line-height:1.4;margin:0}
-  .vision p .g{color:var(--gold)}.vision p .t{color:var(--teal)}
+  .hero .who{margin-top:34px;font-family:var(--h);font-size:14px;letter-spacing:.12em;color:var(--muted)}
+  .scrolldown{margin-top:40px;color:var(--gold);font-family:var(--h);font-size:13px;letter-spacing:.1em}
+  /* strategy */
+  .stratgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:26px}
+  .scard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 28px}
+  .scard .lbl{font-family:var(--h);color:var(--teal);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .scard h3{font-size:21px;margin-bottom:10px}
+  .scard p{font-size:15.5px;color:var(--muted);margin:0}
+  .scard.hl{border-left:4px solid var(--gold)}
+  .bullets{list-style:none;margin-top:8px}
+  .bullets li{font-size:16.5px;color:var(--soft);padding:9px 0 9px 26px;position:relative}
+  .bullets li:before{content:'';position:absolute;left:0;top:16px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .bullets li b{color:var(--text);font-weight:600}
   /* path */
   .path{display:flex;align-items:stretch;gap:14px;flex-wrap:wrap;margin-top:24px}
-  .pstep{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
+  .pstep{flex:1;min-width:210px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
   .pstep.on{border-color:var(--gold)}
   .pstep .yr{font-family:var(--h);color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-  .pstep .r{font-family:var(--h);font-size:24px;font-weight:600;margin:6px 0 8px}
+  .pstep .r{font-family:var(--h);font-size:23px;font-weight:600;margin:6px 0 8px}
   .pstep p{font-size:15px;color:var(--muted);margin:0}
-  /* generic cards */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:26px}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 26px}
-  .card .t{font-family:var(--h);color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
-  .card h3{font-size:20px;margin:8px 0}
-  .card p{color:var(--muted);font-size:15.5px;margin:0}
+  /* team table */
+  .team{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+  .trow{display:grid;grid-template-columns:140px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 26px;align-items:start}
+  .trow .yr{font-family:var(--h);color:var(--gold);font-weight:600;font-size:17px}
+  .trow .who2{font-size:16px;color:var(--soft);line-height:1.6}
+  .trow .who2 b{color:var(--text);font-weight:600}
+  .trow .note{font-size:13px;color:var(--muted);font-family:var(--h);letter-spacing:.04em;margin-top:4px}
   /* timeline */
-  .tl{margin-top:26px}
+  .tl{margin-top:24px}
   .ph{position:relative;padding:0 0 26px 32px;border-left:2px solid var(--line);margin-left:6px}
   .ph:last-child{border-color:transparent}
   .ph:before{content:'';position:absolute;left:-9px;top:2px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--bg)}
   .ph .when{font-family:var(--h);color:var(--gold);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
   .ph h3{font-size:20px;margin:4px 0 6px}
   .ph p{font-size:15.5px;color:var(--muted);margin:0}
-  /* calendar blocks */
-  .calblk{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin-top:16px}
-  .calblk h4{font-family:var(--h);font-size:18px;margin-bottom:10px;color:var(--text)}
-  .calblk h4 .badge{font-size:12px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-left:8px}
-  .calblk ul{list-style:none}
-  .calblk li{font-size:15.5px;color:var(--muted);padding:5px 0 5px 22px;position:relative}
-  .calblk li:before{content:'›';position:absolute;left:0;color:var(--teal);font-weight:700}
-  /* season table */
-  table{width:100%;border-collapse:collapse;margin-top:20px;font-size:15.5px}
-  th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
-  th{font-family:var(--h);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-  td{color:var(--soft)}td.k{font-family:var(--h);color:var(--gold);font-weight:600}
   /* kpi */
   .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:24px}
   .kbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
   .kbox .v{font-family:var(--h);font-size:32px;font-weight:700;color:var(--gold)}
   .kbox .l{font-size:13px;color:var(--muted);margin-top:6px}
   .kbox.fin{border-color:var(--gold)}
-  /* growth narrative */
-  .grow{display:flex;flex-direction:column;gap:12px;margin-top:22px}
-  .gstep{display:grid;grid-template-columns:150px 1fr;gap:22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 24px;align-items:center}
-  .gstep .w{font-family:var(--h);color:var(--gold);font-weight:600;font-size:16px}
-  .gstep .d{color:var(--muted);font-size:15.5px}
+  .nstar{background:var(--surface2);border-radius:14px;padding:22px 26px;margin-top:18px;font-size:16.5px;color:var(--soft)}
+  .nstar b{color:var(--teal);font-family:var(--h)}
   /* needs */
   .needs{display:flex;flex-direction:column;gap:14px;margin-top:22px}
   .need{display:flex;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 26px}
   .need .ic{color:var(--gold);font-family:var(--h);font-size:26px;font-weight:700;flex:none}
   .need h3{font-size:19px;margin-bottom:4px}
   .need p{font-size:15.5px;color:var(--muted);margin:0}
-  /* big statement */
-  .statement{padding:96px 0}
+  .statement{padding:92px 0}
   .statement p{font-family:var(--h);font-size:clamp(26px,4.6vw,46px);font-weight:500;line-height:1.3;letter-spacing:-.01em;color:var(--text)}
   .statement p .g{color:var(--gold)}.statement p .t{color:var(--teal)}
-  .foot{padding:54px 0;text-align:center;color:var(--muted);font-family:var(--h);font-size:13px;letter-spacing:.12em}
+  .foot{padding:52px 0;text-align:center;color:var(--muted);font-family:var(--h);font-size:13px;letter-spacing:.12em}
   .sig-mark{font-size:15px;color:var(--soft);margin-top:8px}
 </style>
 </head>
@@ -109,86 +96,55 @@
 <div class="topnav"><div class="inner">
   <div class="brand">BUDUJE<span class="g">DOM</span></div>
   <div class="links">
-    <a href="#wizja">Wizja</a><a href="#sciezka">Ścieżka</a><a href="#plan">Plan filmowy</a>
-    <a href="#kalendarz">Kalendarz</a><a href="#fazy">Fazy</a><a href="#kpi">Cele</a><a href="#potrzebuje">Potrzebuję</a>
+    <a href="#strategia">Strategia</a><a href="#sciezka">Ścieżka</a><a href="#zespol">Zespół</a>
+    <a href="#fazy">Fazy</a><a href="#cele">Cele</a><a href="#potrzebuje">Potrzebuję</a>
   </div>
 </div></div>
 
 <div class="hero"><div class="wrap">
   <div class="tag">Roadmapa działu kreatywnego · od zera do bohatera</div>
-  <h1>Buduję dom.<br>Buduję <span class="g">markę.</span><br>Buduję <span class="t">siebie.</span></h1>
-  <p>Zaczynam sam, z kamerą w ręku. A kończę jako prawa ręka, która zbudowała cały dział.</p>
-  <div class="who">MACIEK · DYREKTOR KREATYWNY · STRATEG KOMUNIKACJI WIZUALNEJ</div>
+  <h1>Buduję markę,<br>która zmienia <span class="g">rynek budowlany.</span></h1>
+  <div class="who">MACIEK · DYREKTOR KREATYWNY · BUDUJEDOM</div>
   <div class="scrolldown">↓ przewiń</div>
 </div></div>
 
-<section id="wizja"><div class="wrap">
-  <div class="kick">Moja wizja w firmie</div>
-  <h2>Jak to widzę</h2>
-  <p class="lead">Nie przychodzę „na etat". Przychodzę zbudować coś, co współtworzę i współposiadam — i rosnąć razem z tym, co budujemy.</p>
-  <div class="vision">
-    <p>Na starcie <span class="g">robię wszystko sam</span> — jeżdżę, nagrywam, montuję, ogarniam social. Gdy przestaję wyrabiać albo trzeba więcej — <span class="t">dokładamy ludzi.</span> Ja się rozwijam, szkolę, a rozwój całego działu kontrolujemy w stałej współpracy z Piotrkiem i sprzedażą. Z czasem oddaję wszystko następcy i wchodzę wyżej.</p>
+<section id="strategia"><div class="wrap">
+  <div class="kick">Strategia na ten okres · pre-launch</div>
+  <h2>Jak <span class="g">wygrywamy</span></h2>
+  <div class="stratgrid">
+    <div class="scard hl"><div class="lbl">Pozycjonowanie</div><h3>Transparentność, której nikt nie ma</h3><p>Piotr — praktyk z autorytetem — pokazuje budowę z radykalną jawnością kosztów: każda złotówka, każdy błąd, każda oszczędność. Tego nikt w Polsce nie robi tak otwarcie.</p></div>
+    <div class="scard"><div class="lbl">Zakład</div><h3>Twarz + liczby</h3><p>Łączymy dwie siły: wiarygodność Piotra i radykalną transparentność kosztów. Razem budują zaufanie, którego konkurencja nie podrobi — i które prowadzi prosto na platformę.</p></div>
+    <div class="scard"><div class="lbl">Kogo najpierw</div><h3>Wykonawcy — strona podaży</h3><p>Marketplace umiera, gdy jest pusty. Najpierw budujemy bazę zweryfikowanych wykonawców (sieć Piotra + dedykowany content branżowy), żeby w dniu launchu inwestor wchodził na żywą platformę. Popyt budujemy równolegle flagowcem.</p></div>
+    <div class="scard"><div class="lbl">North-star</div><h3>Waitlista = wynik</h3><p>Mierzymy liczbę zapisanych na start platformy. Subskrypcje i zasięg to paliwo — waitlista to dowód, że content realnie zamienia się w przyszłych użytkowników.</p></div>
   </div>
-  <p style="margin-top:24px">Mam 12 lat warsztatu video, oko reżysera i strategię komunikacji we krwi. Marketingu, liczb i zarządzania douczam się świadomie — to nie ściana, to schody. Każdy odcinek to cegła pod firmę i pod moją pozycję.</p>
+  <h3 style="font-size:21px;margin:34px 0 4px;color:var(--text)">Czym różnimy się od budowlanych youtuberów</h3>
+  <ul class="bullets">
+    <li>Pokazujemy <b>prawdziwe pieniądze</b>, nie ogólniki „jak budować".</li>
+    <li>Prowadzimy <b>realnych ludzi przez całą budowę</b> (sezony), nie pojedyncze poradniki.</li>
+    <li>Za treścią stoi <b>produkt</b> — content to wejście do ekosystemu, nie cel sam w sobie.</li>
+    <li>Piotr to <b>praktyk z placu budowy</b>, nie „twórca internetowy".</li>
+  </ul>
 </div></section>
 
 <section id="sciezka"><div class="wrap">
-  <div class="kick">Idealna ścieżka kariery</div>
+  <div class="kick">Moja ścieżka w firmie</div>
   <h2>Od „robię wszystko" do <span class="g">operacji</span></h2>
   <div class="path">
-    <div class="pstep on"><div class="yr">Teraz · Rok 0</div><div class="r">Robię wszystko</div><p>Realizator, montażysta, strateg i social w jednym. Buduję silnik treści własnymi rękami.</p></div>
-    <div class="pstep"><div class="yr">Rok 1–2</div><div class="r">CMO / CCO</div><p>Szef marketingu i komunikacji. Komunikacja to mój rdzeń — stąd naturalny też kierunek CCO (Chief Communications Officer).</p></div>
+    <div class="pstep on"><div class="yr">Rok 0</div><div class="r">Robię wszystko</div><p>Dyrektor kreatywny operacyjnie — produkcja, montaż, strategia, social. Rozpędzam silnik własnymi rękami.</p></div>
+    <div class="pstep"><div class="yr">Rok 1–2</div><div class="r">Dyrektor Marketingu</div><p>Szef marketingu. Buduję zespół, wdrażam procesy, uruchamiam monetyzację. Później, gdy powstaje osobny dział komunikacji — naturalny też kierunek CCO.</p></div>
     <div class="pstep"><div class="yr">Rok 3–5</div><div class="r">COO</div><p>Po wyszkoleniu następcy oddaję marketing i wchodzę w operacje całej firmy — u boku Piotrka.</p></div>
   </div>
-  <p style="margin-top:24px">Stała przez wszystkie lata: <span style="color:var(--gold)">jeden wspólny format video z Piotrkiem co tydzień — zostaje ze mną na zawsze.</span></p>
+  <p style="margin-top:24px">Stała przez wszystkie lata: <span style="color:var(--gold)">jeden wspólny format video z Piotrkiem co tydzień — zostaje na zawsze.</span></p>
 </div></section>
 
-<section id="plan"><div class="wrap">
-  <div class="kick">Plan filmowy · trzon i formaty</div>
-  <h2>„Buduję dom z Adamem" + arsenał formatów</h2>
-  <p class="lead">Adam Z. zaczyna budowę w sierpniu. Kręcimy co tydzień (ekipa, 2 kamery, dron, przebitki od producentów) → sezon 1: 8 odcinków co 2 tygodnie. To trzon YouTube — tu robimy zasięgi i zaufanie.</p>
-  <div class="cards">
-    <div class="card"><div class="t">Flagowiec</div><h3>Buduję dom z…</h3><p>Serial dokumentalny, sezony. Znani + nasi klienci. Stałe hasło: „dziś buduję dom z Adamem, a może jutro z Tobą".</p></div>
-    <div class="card"><div class="t">Autorytet</div><h3>Ekspert odpowiada</h3><p>Q&amp;A: Piotrek + ekspert na pytania z grup FB.</p></div>
-    <div class="card"><div class="t">Segmenty</div><h3>Formaty branżowe</h3><p>Architekci, wykonawcy, szukający pracy, inwestorzy — każdy z własną oprawą.</p></div>
-    <div class="card"><div class="t">Zasięg</div><h3>Podcast + „Jak mieszka…"</h3><p>Niewygodne prawdy branży i tour po domach — magnesy na zasięg.</p></div>
-    <div class="card"><div class="t">Bliskość</div><h3>Piotr opowiada</h3><p>Luźne wrzutki Piotra z biura, prosto od siebie.</p></div>
-    <div class="card"><div class="t">Codziennie</div><h3>TikTok &amp; Instagram</h3><p>Agresywne sociale — codziennie (docelowo kilka razy dziennie): zajawki, klipy, tutoriale.</p></div>
-  </div>
-  <p style="margin-top:24px">Sygnatura marki: kask, świnka-skarbonka, przezroczysta skrzynia <b>„zaoszczędzone vs przepalone"</b>. Plus stały blok o naszej apce w każdym odcinku — od pierwszego.</p>
-</div></section>
-
-<section id="kalendarz"><div class="wrap">
-  <div class="kick">Kalendarz · pierwsze 2 miesiące</div>
-  <h2>Runway → silnik → emisja</h2>
-  <div class="calblk">
-    <h4>Czerwiec–lipiec <span class="badge">Runway</span></h4>
-    <ul>
-      <li>Brandbook (logo, kolory, font) — od człowieka brand + UX/UI</li>
-      <li>Profile: YouTube, FB, Instagram, TikTok + konta Gmail</li>
-      <li>Szukam montażysty (priorytet) i operatora na doskok</li>
-      <li>Scenariusz odcinka 1, koncept charakterystycznego intro</li>
-      <li>Logistyka u Adama, materiał na zapas na sociale</li>
-    </ul>
-  </div>
-  <div class="calblk">
-    <h4>Sierpień <span class="badge">Silnik rusza</span></h4>
-    <ul>
-      <li>3.08 — pierwszy dzień zdjęciowy u Adama, potem co tydzień</li>
-      <li>Drugi dzień: batch odcinków branżowych</li>
-      <li>Sociale codziennie, montaż leci non-stop</li>
-      <li>Koniec sierpnia: odc. 1 zmontowany, cały start budowy nagrany</li>
-    </ul>
-  </div>
-  <div class="calblk">
-    <h4>Wrzesień–grudzień <span class="badge">Emisja sezonu 1</span></h4>
-    <table>
-      <tr><th>Odc.</th><th>Premiera</th><th>Etap</th></tr>
-      <tr><td class="k">1</td><td>14.09</td><td>Start, działka, kim jest Adam</td></tr>
-      <tr><td class="k">2–4</td><td>wrz–paź</td><td>Fundamenty → stan surowy → dach</td></tr>
-      <tr><td class="k">5–7</td><td>list–gru</td><td>Instalacje → elewacja → wykończenia</td></tr>
-      <tr><td class="k">8</td><td>21.12</td><td>Finał: gotowy dom, ile zaoszczędzili (skrzynia $$)</td></tr>
-    </table>
+<section id="zespol"><div class="wrap">
+  <div class="kick">Zespół w czasie</div>
+  <h2>Rozpędzam się — i <span class="t">dokładam ludzi</span></h2>
+  <p class="lead">Zaczynam sam. Gdy nie wyrabiam albo trzeba więcej — wchodzą ludzie. Rozwój działu kontrolujemy razem z Piotrkiem i sprzedażą.</p>
+  <div class="team">
+    <div class="trow"><div class="yr">Rok 0</div><div><div class="who2"><b>Ja sam</b> + montażyści / operatorzy <b>na doskok</b> (doraźnie, pod potrzebę).</div><div class="note">Wąskie gardło = montaż → montażysta dochodzi najszybciej</div></div></div>
+    <div class="trow"><div class="yr">Rok 1–2</div><div><div class="who2">Na stałe: <b>operatorzy + montażysta, grafik, project manager, social media manager.</b></div><div class="note">Dział staje się maszyną — ja prowadzę, nie wykonuję wszystkiego</div></div></div>
+    <div class="trow"><div class="yr">Rok 3–5</div><div><div class="who2"><b>Powiększenie zespołu</b> — dział kreatywny do ~30 osób: produkcja, social, grafika/motion, AI, zarządzanie.</div><div class="note">Z budżetem skalujemy szybciej — więcej ekip, więcej produkcji równolegle</div></div></div>
   </div>
 </div></section>
 
@@ -198,27 +154,14 @@
   <div class="tl">
     <div class="ph"><div class="when">Faza 0–1 · Mies. 0–1</div><h3>Fundament i brand</h3><p>Rola, identyfikacja wizualna (brand + UX/UI), kanały, zaplecze produkcyjne.</p></div>
     <div class="ph"><div class="when">Faza 2 · Mies. 1–3</div><h3>Silnik treści</h3><p>Flagowiec rusza, rytm produkcyjny, pierwsza publiczność od zera.</p></div>
-    <div class="ph"><div class="when">Faza 3 · Mies. 3–6</div><h3>Pre-launch</h3><p>Waitlista, współprace zasięgowe, przygotowanie wykonawców na start.</p></div>
+    <div class="ph"><div class="when">Faza 3 · Mies. 3–6</div><h3>Pre-launch</h3><p>Waitlista, baza wykonawców, współprace zasięgowe — przygotowanie obu stron rynku.</p></div>
     <div class="ph"><div class="when">Faza 4 · Mies. 6–9</div><h3>Launch platformy</h3><p>Kampania startowa, konwersja widowni na użytkowników, onboarding.</p></div>
     <div class="ph"><div class="when">Faza 5 · Mies. 9–18</div><h3>Skala i dział</h3><p>Zatrudnienia, procesy, monetyzacja, marketing jako maszyna przychodowa.</p></div>
-    <div class="ph"><div class="when">Faza 6 · Rok 2–5</div><h3>Dojrzałość · CMO/CCO → COO</h3><p>Dział ~30 osób, sukcesja, przejście do operacji firmy.</p></div>
+    <div class="ph"><div class="when">Faza 6 · Rok 2–5</div><h3>Dojrzałość · Dyr. Marketingu → COO</h3><p>Dział ~30 osób, sukcesja, przejście do operacji firmy.</p></div>
   </div>
 </div></section>
 
-<section id="rozwoj"><div class="wrap">
-  <div class="kick">Jak rośnie dział</div>
-  <h2>Rozpędzam się — i dokładam ludzi</h2>
-  <p class="lead">Narracja jest prosta: zaczynam sam. Gdy nie wyrabiam albo trzeba więcej — wchodzą ludzie. Rozwój kontrolujemy razem z Piotrkiem i sprzedażą.</p>
-  <div class="grow">
-    <div class="gstep"><div class="w">Teraz</div><div class="d">Ja sam — produkcja, montaż, social. Rozpędzam silnik własnymi rękami.</div></div>
-    <div class="gstep"><div class="w">Wkrótce</div><div class="d">+ montażysta na doskok (szybko — to wąskie gardło, materiału będzie dużo).</div></div>
-    <div class="gstep"><div class="w">Następnie</div><div class="d">+ operator (umożliwia drugi dzień zdjęciowy). Dalej rośniemy wg realnej potrzeby.</div></div>
-    <div class="gstep"><div class="w">Z budżetem</div><div class="d">Robimy więcej tego samego — zamiast 1 domu prowadzimy 2, 3 lub 4 budowy równolegle. Więcej ekip, więcej montażu.</div></div>
-    <div class="gstep"><div class="w">Docelowo</div><div class="d">Dział kreatywny ~30 osób. Ja się rozwijam, szkolę i prowadzę całość.</div></div>
-  </div>
-</div></section>
-
-<section id="kpi"><div class="wrap">
+<section id="cele"><div class="wrap">
   <div class="kick">Cele · subskrybenci</div>
   <h2>Dokąd idziemy</h2>
   <div class="kpi">
@@ -227,7 +170,7 @@
     <div class="kbox"><div class="v">250 000</div><div class="l">Rok 3–4</div></div>
     <div class="kbox fin"><div class="v">500 000</div><div class="l">Rok 5</div></div>
   </div>
-  <p style="margin-top:22px">A tak naprawdę? Celujemy najwyżej, jak się da. Trzon na YouTube + agresywne sociale + zaufanie tysięcy rodzin = marka, której nikt nie podrobi.</p>
+  <div class="nstar">Ale liczba, którą realnie optymalizujemy w tym okresie, to <b>waitlista</b> — zapisani na start platformy. Subskrypcje i zasięg są po to, żeby ją napędzać.</div>
 </div></section>
 
 <section id="potrzebuje"><div class="wrap">
