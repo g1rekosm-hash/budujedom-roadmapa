@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Przed wejściem — 1 ekran</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E1217;--surface:#161B22;--surface2:#1E2530;--line:#2A323D;
+    --text:#EDF1F6;--muted:#97A3B0;--soft:#C7D0DA;--gold:#E0A458;--teal:#3FC0A0;
+    --h:'Space Grotesk',sans-serif;--b:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:var(--b);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:36px 24px 48px}
+  .kick{color:var(--gold);font-family:var(--h);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px;text-align:center}
+  .pitch{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:24px 26px}
+  .pitch .t{font-family:var(--h);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .pitch p{font-family:var(--h);font-size:clamp(17px,2.5vw,21px);font-weight:500;line-height:1.5;color:var(--text)}
+  .pitch p .g{color:var(--gold)}.pitch p .t2{color:var(--teal)}
+  h3{font-family:var(--h);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:26px 0 12px}
+  .lines{display:flex;flex-direction:column;gap:10px}
+  .l{background:var(--surface2);border-radius:12px;padding:14px 18px;font-family:var(--h);font-size:17px;font-weight:500;color:var(--gold)}
+  .l:before{content:'„';color:var(--muted)}.l:after{content:'”';color:var(--muted)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+  .box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+  .box .h{font-family:var(--h);color:var(--teal);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+  .box p{font-size:15px;color:var(--soft);margin:0}
+  .box p b{color:var(--text);font-weight:600}
+  .rem{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap}
+  .chip{flex:1;min-width:160px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;color:var(--soft)}
+  .chip b{color:var(--gold);font-family:var(--h)}
+  .breathe{text-align:center;margin-top:30px;font-family:var(--h);color:var(--teal);font-size:16px;font-weight:500}
+  .breathe small{display:block;color:var(--muted);font-family:var(--b);font-weight:400;font-size:14px;margin-top:6px}
+  .back{display:block;text-align:center;margin-top:24px;color:var(--muted);text-decoration:none;font-size:13px;font-family:var(--h);letter-spacing:.04em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kick">Przed wejściem · 30 sekund</div>
+
+  <div class="pitch">
+    <div class="t">Pitch</div>
+    <p>Budujemy markę <span class="g">video-first</span>. Piotr pokazuje budowę z <span class="g">pełną transparentnością kosztów</span> — czego nikt w PL nie robi. Najpierw <span class="t2">wykonawcy</span> (żeby platforma nie ruszyła pusta), flagowiec buduje zaufanie i <span class="t2">waitlistę</span>. Startuję sam i tanio, skaluję, gdy działa.</p>
+  </div>
+
+  <h3>3 zdania do wbicia</h3>
+  <div class="lines">
+    <div class="l">Wygrywamy zaufaniem, nie samym zasięgiem</div>
+    <div class="l">Rosnę razem z firmą — od kamery do operacji</div>
+    <div class="l">Subskrypcje to paliwo, waitlista to wynik</div>
+  </div>
+
+  <h3>Zamknięcie — o co proszę</h3>
+  <div class="grid">
+    <div class="box"><div class="h">01</div><p><b>Kasa na brand managera</b> — który robi też UX platformy.</p></div>
+    <div class="box"><div class="h">02</div><p><b>Bym był przy pracy nad platformą</b> — spójność marki i produktu.</p></div>
+  </div>
+
+  <h3>Mają zapamiętać</h3>
+  <div class="rem">
+    <div class="chip"><b>1.</b> Mam plan i strategię.</div>
+    <div class="chip"><b>2.</b> Startuję tanio i sam.</div>
+    <div class="chip"><b>3.</b> Buduję to jak swoje.</div>
+  </div>
+
+  <div class="breathe">Weź oddech. Znasz to lepiej niż ktokolwiek. 🤝<small>Energia · konkret · słuchaj · zamknij mocno</small></div>
+  <a class="back" href="prezenter.html">← pełna ściąga prezentera</a>
+</div>
+</body>
+</html>
